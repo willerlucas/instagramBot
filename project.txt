@@ -1,3 +1,6 @@
+esse arquivo serve exclusivamente para minhas anotações
+
+
 ambientear selenium no windows
 https://medium.com/ananoterminal/ambientar-selenium-no-windows-3b880fa0e827
     Em todos os scripts Selenium que você escrever, você precisará incluir o código abaixo:
