@@ -8,3 +8,10 @@ https://medium.com/ananoterminal/ambientar-selenium-no-windows-3b880fa0e827
     driver = webdriver.Firefox(firefox_binary=binary, executable_path=r’C:\\geckodriver.exe’)
 
 
+adicionar geckodriver no path
+https://www.youtube.com/watch?v=KNzGtHI_60o&feature=youtu.be
+
+
+
+https://www.reddit.com/r/learnpython/comments/atwkx0/cant_open_firefox_with_selenium/
+https://stackoverflow.com/questions/40186299/selenium-opens-browser-but-doesnt-load-page
