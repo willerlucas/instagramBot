@@ -39,10 +39,12 @@ class InstagramBot:
         print("Abrindo primeira foto")
         self.driver.find_element_by_xpath(
             '//div[@class="v1Nh3 kIKUG  _bz0w"]').click()
-        MyBot.Wait()
-
+        #MyBot.Wait()
+        sleep(random.random()*10)
         # like
         for x in range(posts):
+         
+
             try:
             	#botão (coração) do post
                 like = self.driver.find_element_by_xpath(
@@ -67,7 +69,7 @@ class InstagramBot:
 
     #funcao para aguardar intervalo aletório entre uma ação e outra para evitar bloqueio por spam
     def Wait(self):
-        time = random.randint(5, 15)
+        time = random.random()*50
         print("Esperando "+str(time) + " segundos")
         sleep(time)
 
@@ -77,18 +79,29 @@ class InstagramBot:
         return numb
 
 
-tagList = []
+#tagList = []
+
+
 username = input("Username: ")
 password = input("Password: ")
-try:
-	qntTags = int(input("Quantidade de tags: "))
-except:
-   	qntTags = input("A Quantidade de tags deve ser um valor númerico: ")
 
-try:
-	qntPosts = int(input("Quantidade de likes por tag: "))
-except:
-	qntPosts = input("A Quantidade de posts deve ser um valor númerico: ")	
+qntTags = input("Quantidade de tags: ")
+while True:
+    try:
+        qntTags = int(qntTags)
+        break
+    except:
+        qntTags = input("A Quantidade de tags deve ser um valor númerico inteiro: ")
+
+
+qntPosts = input("Quantidade de likes por tag: ")
+while True:
+    try:
+        qntPosts = int(qntPosts)
+        break
+
+    except:
+        qntPosts = input("A Quantidade de posts deve ser um valor númerico inteiro: ")	
 
 for x in range(qntTags):
     tag = input("Insira a tag "+str(x+1)+": ")
