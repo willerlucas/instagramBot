@@ -35,10 +35,13 @@ class InstagramBot:
             print("erro ao procurar pela tag")
 
     def Like(self, posts):
-        # open the first photo
-        print("Abrindo primeira foto")
-        self.driver.find_element_by_xpath(
-            '//div[@class="v1Nh3 kIKUG  _bz0w"]').click()
+        # sortear uma foto para abrir
+        linha = random.randint(1,3)
+        coluna = random.randint(1,3)
+        print("abrindo a foto: ",linha,coluna)
+        print("Abrindo foto")
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/article/div[1]/div/div/div["+str(linha)+"]/div["+str(coluna)+"]").click()
+
         #MyBot.Wait()
         sleep(random.random()*10)
         # like
@@ -78,9 +81,10 @@ class InstagramBot:
         numb = random.randint(1, 5)
         return numb
 
-
-#tagList = []
-
+#INPUTS
+#INPUTS
+#INPUTS
+#INPUTS
 
 username = input("Username: ")
 password = input("Password: ")
@@ -103,6 +107,7 @@ while True:
     except:
         qntPosts = input("A Quantidade de posts deve ser um valor númerico inteiro: ")	
 
+tagList = []
 for x in range(qntTags):
     tag = input("Insira a tag "+str(x+1)+": ")
     tagList.append(tag)
